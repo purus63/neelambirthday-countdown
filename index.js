@@ -1,4 +1,5 @@
 // Set the date we're counting down to
+
 var countDownDate = new Date("January 15, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
@@ -19,10 +20,11 @@ var x = setInterval(function() {
   // Display the result in an element with id="demo"
   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
-
   // If the count down is finished, write some text 
+  document.getElementById("demo1").style.visibility = "hidden";
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "";
+    document.getElementById("demo1").style.visibility = "visible";
   }
 }, 1000);
